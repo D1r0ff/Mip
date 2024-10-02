@@ -2,3 +2,5 @@
 
 Recommendation systems have become an incredibly important part of our lives. They are used in all online services, and the frequency of their use is only growing every year.
 These algorithms are used to personalise the experience by making suggestions tailored to our preferences and interests. Without them, our modern online world would be impossible.
+
+But these systems cannot be effective without users' personal information. This causes a lot of problems, both legal and moral. Also, the results of these systems are not always predictable. Sometimes, using recommendation systems can lead you into an “information bubble” from which you cannot get out without help.
