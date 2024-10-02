@@ -1,0 +1,4 @@
+                                                  Abstract
+
+Recommendation systems have become an incredibly important part of our lives. They are used in all online services, and the frequency of their use is only growing every year.
+These algorithms are used to personalise the experience by making suggestions tailored to our preferences and interests. Without them, our modern online world would be impossible.
