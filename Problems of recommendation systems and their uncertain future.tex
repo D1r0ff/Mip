@@ -52,17 +52,11 @@ But these systems cannot be effective without users' personal information. This 
 Also, the results of these systems are not always predictable. Sometimes, using recommendation systems can lead you into an “information bubble” from which you cannot get out without help. This can lead to terrible consequences that have already happened many times in human history. 
 
 In this article, we will look at the problems of recommendation systems and the situations they have led to. We will also explore the methods of dealing with these problems that are used now and will be used in the future.
-\newline
-\newline
+\newpage
 
 \end{abstract}
 
-%  \begin{figure}[!h]
-%     \centering
-%     \includegraphics[width=0.7\linewidth]{Diagram.png}
-%     \caption{Text for picture}
-%     \label{fig:picture}
-% \end{figure}
+
 
 \section{Introduction}
 In today's information society, where the amount of data and information is growing exponentially, users often face the problem of information overload. This phenomenon, known as ‘information overload’, makes it difficult to find the right products and services. In turn, sellers face difficulties in promoting their products in a competitive environment. Therefore, recommendation systems have become an integral part of modern business, as their main goal is to efficiently sort and select products according to individual user preferences.
@@ -77,9 +71,7 @@ While much has been written about the benefits of recommendation systems, the ne
 In this article, I plan to first describe in detail the general principles of recommendation systems~\ref{How They Work}, and then consider their varieties~\ref{Types of recommendation systems}, such as content-based recommendations, collaborative filtering, and hybrid approaches. Next, I will analyse the benefits that recommendation systems can provide to both users~\ref{Benefits for Users} and businesses~\ref{Benefits for Platforms}, highlighting their role in increasing customer satisfaction and sales performance.
 
 Finally, I will focus on the challenges associated with recommendation systems~\ref{Ethical and Legal Issues} ~\ref{Risks of Data Breaches} ~\ref{Information Bubbles} and try to find possible solutions to these problems~\ref{Current and Future Solutions} ~\ref{Conclusion}. My suggestions will be based on research and innovations already being implemented by various companies and governments. This will include discussions on ethical standards, transparency of algorithms, and ways to ensure diversity in recommendations for users.
-\newline
-\newline
-\newline
+
 
 
 
@@ -87,6 +79,7 @@ Finally, I will focus on the challenges associated with recommendation systems~\
 The general principle of recommendation systems is to analyze user preferences and behaviors in order to suggest relevant items, products, or content. These systems aim to enhance the user experience by providing personalized recommendations based on various data sources.
 
 \begin{itemize}
+\newpage
 \item \textbf{Data Collection}
 
 Recommendation systems gather data from users, which can include explicit feedback (such as ratings and reviews), implicit feedback (such as browsing history, purchase history, and time spent on items), and demographic information.
@@ -105,19 +98,19 @@ Based on the collected data, the system creates a profile for each user. This pr
 \end{itemize}
 
 In summary, recommendation systems work by collecting user and item data, analyzing it through algorithms, and providing personalized suggestions, ultimately aiming to improve user satisfaction and engagement.
-\newline
+
 
 
  \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.7\linewidth]{Diagram 2.png}
+    \includegraphics[width=1\linewidth]{Diagram 2.png}
     \caption{How the recommendation system works}
     \label{fig:picture}
 \end{figure}
  
 
 
-
+\newpage
 \section{Types of recommendation systems} \label{Types of recommendation systems}
 
 In general, recommendation systems are divided into two types: Collaborative Filtering and Content-Based Filtering.
@@ -125,16 +118,40 @@ In general, recommendation systems are divided into two types: Collaborative Fil
 \begin{enumerate}
 \item  \textbf{Collaborative Filtering}
 
-Collaborative filtering relies on the idea that users who agreed in the past will agree in the future.
+Collaborative filtering relies on the idea that users who agreed in the past will agree in the future. The system finds two people with similar user profiles and recommends to one of them what the other liked, expecting that he will like it too, because they have similar interests.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagram 3.png}
+    \caption{Collaborative Filtering Diagram}
+    \label{fig:picture}
+\end{figure}
+
+\newpage
 \item  \textbf{Content-Based Filtering}
 
-Content-based filtering focuses on the characteristics of the items themselves rather than on user interactions.
+Content-based filtering focuses on the characteristics of the items themselves rather than on user interactions. If the user has chosen items in the past that were somewhat similar to each other, the system will recommend things that also have something in common with them, expecting the user to like it because he liked it in the past.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Diagram 4.png}
+    \caption{Content-based Filtering Diagram}
+    \label{fig:picture}
+\end{figure}
 	
 \end{enumerate}
 
+But the most effective method is to combine these two types. This allows you to create personalised recommendations based on both a person's past actions and the actions of people with similar preferences. Such recommendations are best suited to the user's preferences.
 
+\newpage
 \section{Benefits for Users} \label{Benefits for Users}
+Users gain several significant benefits from recommendation systems that enhance their experience with products and services. First, these systems provide personalization by offering recommendations based on user preferences and behavior, helping users find items or content that best match their individual tastes.
 
+Second, thanks to automated recommendations, users can save time by quickly locating what they need without having to sift through a vast amount of information. This makes the process of shopping or searching for content more efficient. Additionally, recommendation systems open up new possibilities by helping users discover products or services they might not have found on their own, including new brands, genres, or categories.
+
+Moreover, personalized recommendations increase user satisfaction, as they boost the likelihood that a user will find something they enjoy, which, in turn, enhances overall enjoyment of the purchase or content consumption. Recommendation systems also reduce information overload by filtering through large amounts of available information, helping users avoid stress when choosing from numerous options.
+
+Furthermore, users who receive relevant recommendations are more likely to engage with the platform, which can lead to repeat purchases or more frequent use of services. In some systems, the opinions of friends or other users are taken into account, allowing for recommendations based on social connections and increasing trust in specific products or services.
+
+Finally, recommendation systems can adapt to changes in user preferences by incorporating new data and feedback, ensuring that recommendations remain relevant. In summary, recommendation systems create a more convenient, efficient, and satisfying experience for users, allowing them to find what truly aligns with their interests and needs.
 
 \section{Benefits for Platforms} \label{Benefits for Platforms}
 
@@ -144,7 +161,7 @@ Content-based filtering focuses on the characteristics of the items themselves r
 
 \section{Information Bubbles} \label{Information Bubbles}
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{Types of recommendation systems:Collaborative filtering}), a potom na ešte nejaké (časť~\ref{Types of recommendation systems:Content-based filtering}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
+
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
