@@ -1,21 +1,20 @@
-% Metódy inžinierskej práce
-
 \documentclass[10pt,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
-\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage{url} % príkaz \url na formátovanie URL
-\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{hyperref} 
 
 \usepackage{cite}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Problems of recommendation systems and their uncertain future\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Dmytro Panychuk}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Problems of recommendation systems and their uncertain future\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2024/25, vedenie: Yevheniia Kataieva }} 
 
 \author{Dmytro Panychuk\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -23,7 +22,7 @@
 	{\small \texttt{xpanychuk@stuba.sk}}
 	}
 
-\date{\small 1. oktober 2024} % upravte
+\date{\small 28. oktober 2024} 
 
 
 
@@ -33,6 +32,17 @@
 
 \begin{abstract}
 \centering
+
+% \begin{table}
+%     \begin{tabular}{l|r}
+%         Item & Quantity \\\hline
+%         First item  & First quantity  \\
+%         Second item & Second quantity \\
+%         Third item  & Third quantity  \\
+%     \end{tabular}
+%     \caption{Text for table}
+%     \label{tab:widgets}
+% \end{table}
 
 
 Recommendation systems have become an incredibly important part of our lives. They are used in all online services, and the frequency of their use is only growing every year. 
@@ -47,19 +57,43 @@ In this article, we will look at the problems of recommendation systems and the 
 \end{abstract}
 
 
+%  \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.7\linewidth]{Diagram.png}
+%     \caption{Text for picture}
+%     \label{fig:picture}
+% \end{figure}
 
-\section{Úvod}
+
+
+\section{Introduction}
+In today's information society, where the amount of data and information is growing exponentially, users often face the problem of information overload. This phenomenon, known as ‘information overload’, makes it difficult to find the right products and services. In turn, sellers face difficulties in promoting their products in a competitive environment. Therefore, recommendation systems have become an integral part of modern business, as their main goal is to efficiently sort and select products according to individual user preferences.
+
+recommendation systems operate based on the analysis of user behaviour, purchase history, product ratings and other factors. They use algorithms to predict whether a particular product is likely to appeal to a particular user based on previous preferences. In the digital world, such systems have become important tools for increasing customer satisfaction and driving sales for large e-commerce companies.
+
+Well-implemented recommendation systems can significantly improve the user experience by making the shopping process more personalised and convenient. They help customers find the right products faster and expand their choices, which in turn helps to increase sales for businesses. Given these factors, the implementation of recommendation systems has become imperative for the successful operation of modern businesses.
+
+
+While much has been written about the benefits of recommendation systems, the negative aspects of their use remain less well understood. These may include data privacy issues, algorithmic bias, and the risk of creating ‘information bubbles’ where users only receive content that confirms their existing views. This can lead to a limited diversity of information and products, which can negatively impact the user experience.
+
+In this article, I plan to first describe in detail the general principles of recommendation systems, and then consider their varieties, such as content-based recommendations, collaborative filtering, and hybrid approaches. Next, I will analyse the benefits that recommendation systems can provide to both users and businesses, highlighting their role in increasing customer satisfaction and sales performance.
+
+Finally, I will focus on the challenges associated with recommendation systems and try to find possible solutions to these problems. My suggestions will be based on research and innovations already being implemented by various companies and governments. This will include discussions on ethical standards, transparency of algorithms, and ways to ensure diversity in recommendations for users.
+
+
+
+
 
 Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
 
 Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{How They Work}.
+Dôležité súvislosti sú uvedené v častiach~\ref{Benefits for Users} a~\ref{Benefits for Platforms}.
+Záverečné poznámky prináša časť~\ref{Conclusion}.
 
 
 
-\section{Nejaká časť} \label{nejaka}
+\section{How They Work} \label{How They Work}
 
 Z obr.~\ref{f:rozhod} je všetko jasné. 
 
@@ -73,14 +107,14 @@ Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný pláva
 
 
 
-\section{Iná časť} \label{ina}
+\section{Types of recommendation systems} \label{Types of recommendation systems}
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
+Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{Types of recommendation systems:Collaborative filtering}), a potom na ešte nejaké (časť~\ref{Types of recommendation systems:Content-based filtering}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
 
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
+\subsection{Collaborative filtering} \label{Types of recommendation systems:Collaborative filtering}
 
 Niekedy treba uviesť zoznam:
 
@@ -105,31 +139,30 @@ Ten istý zoznam, len číslovaný:
 \end{enumerate}
 
 
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
+\subsection{Content-based filtering} \label{Types of recommendation systems:Content-based filtering}
 
 \paragraph{Veľmi dôležitá poznámka.}
 Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
 
 
-
-\section{Dôležitá časť} \label{dolezita}
-
+\section{Benefits for Users} \label{Benefits for Users}
 
 
+\section{Benefits for Platforms} \label{Benefits for Platforms}
 
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
+\section{Ethical and Legal Issues} \label{Ethical and Legal Issues}
 
+\section{Risks of Data Breaches} \label{Risks of Data Breaches}
 
+\section{Information Bubbles} \label{Information Bubbles}
 
+\section{Current and Future Solutions} \label{Current and Future Solutions}
 
-\section{Záver} \label{zaver} % prípadne iný variant názvu
-
+\section{Conclusion} \label{Conclusion}
 
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
-
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
 \bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliographystyle{plain}
 \end{document}
