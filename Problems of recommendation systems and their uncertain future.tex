@@ -5,6 +5,7 @@
 \usepackage[IL2]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{wrapfig}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} 
@@ -31,17 +32,6 @@
 \begin{abstract}
 \centering
 
-% \begin{table}
-%     \begin{tabular}{l|r}
-%         Item & Quantity \\\hline
-%         First item  & First quantity  \\
-%         Second item & Second quantity \\
-%         Third item  & Third quantity  \\
-%     \end{tabular}
-%     \caption{Text for table}
-%     \label{tab:widgets}
-% \end{table}
-
 
 Recommendation systems have become an incredibly important part of our lives. They are used in all online services, and the frequency of their use is only growing every year. 
 
@@ -59,7 +49,7 @@ In this article, we will look at the problems of recommendation systems and the 
 
 
 \section{Introduction}
-In today's information society, where the amount of data and information is growing exponentially, users often face the problem of information overload. This phenomenon, known as ‘information overload’, makes it difficult to find the right products and services. In turn, sellers face difficulties in promoting their products in a competitive environment. Therefore, recommendation systems have become an integral part of modern business, as their main goal is to efficiently sort and select products according to individual user preferences.
+In today's information society, where the amount of data and information is growing exponentially, users often face the problem of information overload\cite{overload}. This phenomenon, known as ‘information overload’, makes it difficult to find the right products and services. In turn, sellers face difficulties in promoting their products in a competitive environment. Therefore, recommendation systems have become an integral part of modern business, as their main goal is to efficiently sort and select products according to individual user preferences.
 
 Recommendation systems operate based on the analysis of user behavior, purchase history, product ratings and other factors. They use algorithms to predict whether a particular product is likely to appeal to a particular user based on previous preferences. In the digital world, such systems have become important tools for increasing customer satisfaction and driving sales for large e-commerce companies.
 
@@ -105,7 +95,7 @@ In summary, recommendation systems work by collecting user and item data, analyz
     \centering
     \includegraphics[width=1\linewidth]{Diagram 2.png}
     \caption{How the recommendation system works}
-    \label{fig:picture}
+    \label{fig:recommendations}
 \end{figure}
  
 
@@ -113,7 +103,7 @@ In summary, recommendation systems work by collecting user and item data, analyz
 \newpage
 \section{Types of recommendation systems} \label{Types of recommendation systems}
 
-In general, recommendation systems are divided into two types: Collaborative Filtering and Content-Based Filtering.
+In general, recommendation systems are divided into two types: Collaborative Filtering and Content-Based Filtering\cite{types}.
 
 \begin{enumerate}
 \item  \textbf{Collaborative Filtering}
@@ -123,7 +113,7 @@ Collaborative filtering relies on the idea that users who agreed in the past wil
     \centering
     \includegraphics[width=0.8\linewidth]{Diagram 3.png}
     \caption{Collaborative Filtering Diagram}
-    \label{fig:picture}
+    \label{fig:collaborative}
 \end{figure}
 
 \newpage
@@ -134,14 +124,14 @@ Content-based filtering focuses on the characteristics of the items themselves r
     \centering
     \includegraphics[width=0.7\linewidth]{Diagram 4.png}
     \caption{Content-based Filtering Diagram}
-    \label{fig:picture}
+    \label{fig:content-based}
 \end{figure}
 	
 \end{enumerate}
 
 But the most effective method is to combine these two types. This allows you to create personalised recommendations based on both a person's past actions and the actions of people with similar preferences. Such recommendations are best suited to the user's preferences.
 
-\newpage
+
 \section{Benefits for Users} \label{Benefits for Users}
 Users gain several significant benefits from recommendation systems that enhance their experience with products and services. First, these systems provide personalization by offering recommendations based on user preferences and behavior, helping users find items or content that best match their individual tastes.
 
@@ -149,11 +139,48 @@ Second, thanks to automated recommendations, users can save time by quickly loca
 
 Moreover, personalized recommendations increase user satisfaction, as they boost the likelihood that a user will find something they enjoy, which, in turn, enhances overall enjoyment of the purchase or content consumption. Recommendation systems also reduce information overload by filtering through large amounts of available information, helping users avoid stress when choosing from numerous options.
 
+For example in this study \cite{closeness}using the following formulas
+
+\begin{eqnarray}
+    &&\begin{array}{*{35}{l}}
+        s_{\alpha \beta}^{\left(\text{CN}\right)}(t)=\underset{i=0}{\overset{N}{\sum}}\,{{a}_{i\alpha}}(t){{a}_{i\beta}}(t), 
+    \end{array}
+\end{eqnarray}
+
+\begin{eqnarray}
+    &&\begin{array}{*{35}{l}}
+        s_{\alpha \beta}^{\left(\text{cosine}\right)}(t)=\frac{1}{\sqrt{{{k}_{\alpha}}{{k}_{\beta}}}}\underset{i=0}{\overset{N}{\sum}}\,{{a}_{i\alpha}}(t){{a}_{i\beta}}(t). 
+    \end{array}
+\end{eqnarray}
+
+researchers have determined that
+sufficiently effective systems can increase the accuracy of recommendations for the buyer several times.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{picture.jpg}
+    \caption{closeness of the recommended to the desired result}
+    \label{fig:closeness}
+\end{figure}
+
 Furthermore, users who receive relevant recommendations are more likely to engage with the platform, which can lead to repeat purchases or more frequent use of services. In some systems, the opinions of friends or other users are taken into account, allowing for recommendations based on social connections and increasing trust in specific products or services.
 
 Finally, recommendation systems can adapt to changes in user preferences by incorporating new data and feedback, ensuring that recommendations remain relevant. In summary, recommendation systems create a more convenient, efficient, and satisfying experience for users, allowing them to find what truly aligns with their interests and needs.
 
+
+
+\newpage
 \section{Benefits for Platforms} \label{Benefits for Platforms}
+Companies gain numerous advantages from implementing recommendation systems, which can significantly enhance their business performance. First and foremost, these systems contribute to increased sales by suggesting relevant products that users may want to purchase, stimulating impulse buys and raising the average transaction value.
+
+Additionally, personalized recommendations improve overall customer satisfaction, leading to a higher level of customer contentment. Satisfied customers are more likely to return and recommend the company to others, fostering positive word-of-mouth. Moreover, when users receive tailored suggestions that align with their interests, the likelihood of cart abandonment decreases, which is especially crucial in a competitive market.
+
+Recommendation systems also help build customer loyalty by creating a closer connection between users and the brand. When a company offers relevant content or products, it fosters brand loyalty among its customers. Furthermore, the data analyzed by these systems provides valuable insights into customer behavior and preferences, allowing companies to refine their marketing strategies effectively.
+
+By enabling more precise targeting in marketing campaigns, recommendation systems can optimize marketing expenditures, reducing costs while increasing effectiveness. Recommendations based on user interests can lead to higher conversion rates, making marketing efforts more efficient.
+
+Moreover, companies that successfully implement effective recommendation systems can gain a competitive edge in the market by offering a more personalized experience compared to their rivals. This competitive advantage can be crucial in attracting and retaining customers.
+
+Finally, personalized recommendations can encourage users to spend more time on the platform, which may lead to increased purchases or content consumption. In summary, recommendation systems not only enhance user experience but also provide substantial business benefits, such as increased sales, reduced marketing costs, and strengthened customer loyalty. Implementing such systems is becoming an essential element of successful business strategy in today’s competitive environment.
 
 \section{Ethical and Legal Issues} \label{Ethical and Legal Issues}
 
@@ -163,10 +190,30 @@ Finally, recommendation systems can adapt to changes in user preferences by inco
 
 
 
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
+Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. 
 
 \section{Current and Future Solutions} \label{Current and Future Solutions}
 
+\begin{table}
+\centering
+    \begin{tabular}{l|r}
+        Year  & Billions of USD \\\hline
+        2022  & 2.18  \\
+        2023  & 2.8   \\
+        2024  & 3.6   \\
+        2025  & 4.63  \\
+        2026  & 5.94  \\
+        2027  & 7.64  \\
+        2028  & 9.81   \\
+        2029  & 12.61  \\
+        2030  & 16.21  \\
+        2031  & 20.82  \\
+        2032  & 26.76  \\
+        2033  & 34.39  \\
+    \end{tabular}
+    \caption{Finances to be invested in recommendation systems}
+    \label{tab:widgets}
+\end{table}
 \section{Conclusion} \label{Conclusion}
 
 
