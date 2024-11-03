@@ -7,13 +7,14 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{wrapfig}
-\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{url} 
 \usepackage{hyperref} 
+\usepackage[a4paper, margin=1.5in]{geometry}
 
 \usepackage{cite}
 %\usepackage{times}
 
-\pagestyle{headings}
+% \pagestyle{headings}
 
 \title{Problems of recommendation systems and their uncertain future\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2024/25, vedenie: Yevheniia Kataieva }} 
 
@@ -23,23 +24,24 @@
 	{\small \texttt{xpanychuk@stuba.sk}}
 	}
 
-\date{\small 28. oktober 2024} 
+\date{\small 28. October 2024} 
 
 \begin{document}
+
 
 \maketitle
 
 \begin{abstract}
-\centering
+
 
 
 Recommendation systems have become an incredibly important part of our lives. They are used in all online services, and the frequency of their use is only growing every year. 
 
-These algorithms are used to personalise the experience by making suggestions tailored to our preferences and interests\cite{experience}. The use of such systems is beneficial for both the platform and the end user. It recommends products that the user is more likely to buy, which saves them time and the platform will receive additional profit from new sales\cite{comerce}.  Without them, our modern online world would be impossible because it is a thing that allows the customer to find the product they need and the seller to increase sales through the target audience.
+These algorithms are used to personalize the experience by making suggestions tailored to our preferences and interests\cite{experience}. The use of such systems is beneficial for both the platform and the end user. It recommends products that the user is more likely to buy, which saves them time and the platform will receive additional profit from new sales\cite{comerce}.  Without them, our modern online world would be impossible because it is a thing that allows the customer to find the product they need and the seller to increase sales through the target audience.
 
-But these systems cannot be effective without users' personal information. This causes a lot of problems, both legal and moral. On the one hand, the user is not fully aware of how much of their personal information the platform receives, and on the other hand, databases are often hacked and your personal information can become public in a matter of seconds\cite{zdroj}.
+But these systems cannot be effective without users' personal information. This causes a lot of problems, both legal and moral. On the one hand, the user is not fully aware of how much of their personal information the platform receives, and on the other hand, databases are often hacked, and your personal information can become public in a matter of seconds\cite{zdroj}.
 
-Also, the results of these systems are not always predictable. Sometimes, using recommendation systems can lead you into an “information bubble”\cite{boubble} from which you cannot get out without help. This can lead to terrible consequences that have already happened many times in human history. 
+Also, the results of these systems are not always predictable. Sometimes, using recommendation systems can lead you into an “information bubble”\cite{boubble}, from which you cannot get out without help. This can lead to terrible consequences that have already happened many times in human history. 
 
 In this article, we will look at the problems of recommendation systems and the situations they have led to~\ref{Ethical and Legal Issues} ~\ref{Risks of Data Breaches} ~\ref{Information Bubbles}. We will also explore the methods of dealing with these problems that are used now and will be used in the future~\ref{Current and Future Solutions} ~\ref{Conclusion}.
 \newpage
@@ -47,7 +49,7 @@ In this article, we will look at the problems of recommendation systems and the 
 \end{abstract}
 
 
-
+\newpage
 \section{Introduction}
 In today's information society, where the amount of data and information is growing exponentially, users often face the problem of information overload\cite{overload}. This phenomenon, known as ‘information overload’, makes it difficult to find the right products and services. In turn, sellers face difficulties in promoting their products in a competitive environment\cite{business}. Therefore, recommendation systems have become an integral part of modern business\cite{comerce}, as their main goal is to efficiently sort and select products according to individual user preferences.
 
@@ -58,10 +60,9 @@ Well-implemented recommendation systems can significantly improve the user exper
 
 While much has been written about the benefits of recommendation systems, the negative aspects of their use remain less well understood. These may include data privacy issues, algorithmic bias, and the risk of creating ‘information bubbles’\cite{boubble} where users only receive content that confirms their existing views. This can lead to a limited diversity of information and products\cite{trouble}, which can negatively impact the user experience.
 
-In this article, I plan to first describe in detail the general principles of recommendation systems~\ref{How They Work}, and then consider their varieties~\ref{Types of recommendation systems}, such as content-based recommendations, collaborative filtering, and hybrid approaches. Next, I will analyse the benefits that recommendation systems can provide to both users~\ref{Benefits for Users} and businesses~\ref{Benefits for Platforms}, highlighting their role in increasing customer satisfaction and sales performance.
+In this article, I plan to first describe in detail the general principles of recommendation systems~\ref{How They Work}, and then consider their varieties~\ref{Types of recommendation systems}, such as content-based recommendations, collaborative filtering, and hybrid approaches. Next, I will analyze the benefits that recommendation systems can provide to both users~\ref{Benefits for Users} and businesses~\ref{Benefits for Platforms}, highlighting their role in increasing customer satisfaction and sales performance.
 
 Finally, I will focus on the challenges associated with recommendation systems~\ref{Ethical and Legal Issues} ~\ref{Risks of Data Breaches} ~\ref{Information Bubbles} and try to find possible solutions to these problems~\ref{Current and Future Solutions} ~\ref{Conclusion}. My suggestions will be based on research and innovations already being implemented by various companies and governments. This will include discussions on ethical standards, transparency of algorithms, and ways to ensure diversity in recommendations for users.
-
 
 
 
@@ -127,9 +128,10 @@ Content-based filtering focuses on the characteristics of the items themselves r
     \label{fig:content-based}
 \end{figure}
 	
-\end{enumerate}
 
-But the most effective method is to combine these two types. This allows you to create personalised recommendations based on both a person's past actions and the actions of people with similar preferences. Such recommendations are best suited to the user's preferences.
+\item  \textbf{Combined}
+But the most effective method is to combine these two types. This allows you to create personalized recommendations based on both a person's past actions and the actions of people with similar preferences. Such recommendations are best suited to the user's preferences.
+\end{enumerate}
 
 
 \section{Benefits for Users} \label{Benefits for Users}
@@ -137,9 +139,10 @@ Users gain several significant benefits from recommendation systems that enhance
 
 Second, thanks to automated recommendations, users can save time by quickly locating what they need without having to sift through a vast amount of information. This makes the process of shopping or searching for content more efficient. Additionally, recommendation systems open up new possibilities by helping users discover products or services they might not have found on their own, including new brands, genres, or categories.
 
+\newpage
 Moreover, personalized recommendations increase user satisfaction, as they boost the likelihood that a user will find something they enjoy, which, in turn, enhances overall enjoyment of the purchase or content consumption. Recommendation systems also reduce information overload by filtering through large amounts of available information, helping users avoid stress when choosing from numerous options.
 
-For example in this study \cite{closeness}using the following formulas
+For example, in this study \cite{closeness}using the following formulas
 
 \begin{eqnarray}
     &&\begin{array}{*{35}{l}}
@@ -168,25 +171,71 @@ Finally, recommendation systems can adapt to changes in user preferences by inco
 
 
 
-\newpage
+
 \section{Benefits for Platforms} \label{Benefits for Platforms}
-Companies gain numerous advantages from implementing recommendation systems, which can significantly enhance their business performance. First and foremost, these systems contribute to increased sales by suggesting relevant products that users may want to purchase, stimulating impulse buys and raising the average transaction value.
+Companies gain numerous advantages from implementing recommendation systems\cite{comerce}, which can significantly enhance their business performance. First and foremost, these systems contribute to increased sales by suggesting relevant products that users may want to purchase, stimulating impulse buys and raising the average transaction value.
 
-Additionally, personalized recommendations improve overall customer satisfaction, leading to a higher level of customer contentment. Satisfied customers are more likely to return and recommend the company to others, fostering positive word-of-mouth. Moreover, when users receive tailored suggestions that align with their interests, the likelihood of cart abandonment decreases, which is especially crucial in a competitive market.
+Additionally, personalized recommendations improve overall customer satisfaction\cite{user}, leading to a higher level of customer contentment. Satisfied customers are more likely to return and recommend the company to others, fostering positive word-of-mouth. Moreover, when users receive tailored suggestions that align with their interests, the likelihood of cart abandonment decreases, which is especially crucial in a competitive market.
 
-Recommendation systems also help build customer loyalty by creating a closer connection between users and the brand. When a company offers relevant content or products, it fosters brand loyalty among its customers. Furthermore, the data analyzed by these systems provides valuable insights into customer behavior and preferences, allowing companies to refine their marketing strategies effectively.
+Recommendation systems also help build customer loyalty by creating a closer connection between users and the brand\cite{user}. When a company offers relevant content or products, it fosters brand loyalty among its customers. Furthermore, the data analyzed by these systems provides valuable insights into customer behavior and preferences, allowing companies to refine their marketing strategies effectively.
 
-By enabling more precise targeting in marketing campaigns, recommendation systems can optimize marketing expenditures, reducing costs while increasing effectiveness. Recommendations based on user interests can lead to higher conversion rates, making marketing efforts more efficient.
+By enabling more precise targeting in marketing campaigns, recommendation systems can optimize marketing expenditures, reducing costs while increasing effectiveness\cite{comerce}. Recommendations based on user interests can lead to higher conversion rates, making marketing efforts more efficient\cite{user}.
 
-Moreover, companies that successfully implement effective recommendation systems can gain a competitive edge in the market by offering a more personalized experience compared to their rivals. This competitive advantage can be crucial in attracting and retaining customers.
+Moreover, companies that successfully implement effective recommendation systems can gain a competitive edge in the market by offering a more personalized experience compared to their rivals\cite{comerce}. This competitive advantage can be crucial in attracting and retaining customers.
 
-Finally, personalized recommendations can encourage users to spend more time on the platform, which may lead to increased purchases or content consumption. In summary, recommendation systems not only enhance user experience but also provide substantial business benefits, such as increased sales, reduced marketing costs, and strengthened customer loyalty. Implementing such systems is becoming an essential element of successful business strategy in today’s competitive environment.
+Finally, personalized recommendations can encourage users to spend more time on the platform\cite{experience}, which may lead to increased purchases or content consumption. In summary, recommendation systems not only enhance user experience but also provide substantial business benefits, such as increased sales, reduced marketing costs, and strengthened customer loyalty. Implementing such systems is becoming an essential element of successful business strategy in today’s competitive environment.
+
+
 
 \section{Ethical and Legal Issues} \label{Ethical and Legal Issues}
+\begin{itemize}
+
+
+
+\item \textbf{Data Privacy and Consent} :
+One of the primary ethical issues surrounding recommendation systems is the collection and use of personal data\cite{problems}. These systems often rely on vast amounts of user information, including browsing history, purchase behavior, and demographic details, to generate tailored recommendations. This raises questions about user consent and the transparency of data usage. Users may not fully understand how their data is being collected, processed, and shared, leading to potential violations of privacy rights.
+
+\item \textbf{Regulatory frameworks} , such as the General Data Protection Regulation (GDPR) in the European Union, have been established to address these concerns. These regulations mandate that organizations obtain explicit consent from users before collecting their data and provide them with the right to access, rectify, or delete their personal information\cite{ethical}. However, compliance can be complex, and many organizations struggle to navigate these legal requirements effectively.
+
+\newpage
+\item \textbf{Algorithmic Bias and Fairness} :
+Another critical ethical issue is algorithmic bias\cite{problems}, which can arise when recommendation systems inadvertently reinforce existing stereotypes or discrimination. If the data used to train these systems is biased—reflecting historical inequities—this can result in skewed recommendations that perpetuate harmful social dynamics. For instance, a system might recommend products primarily to certain demographic groups while neglecting others, thus limiting diversity and inclusion in content and offerings.
+
+To mitigate these biases, it is essential for developers to implement fair algorithms and continuously evaluate their performance across different user groups. This involves diverse data collection practices and regular audits to identify and rectify any biases in the recommendation process.
+
+\item \textbf{Manipulation and User Autonomy} :
+Recommendation systems also raise concerns about manipulation and the erosion of user autonomy\cite{problems}. By presenting content that aligns with a user’s past preferences, these systems can create "echo chambers," where individuals are only exposed to viewpoints and products that reinforce their existing beliefs. This can limit exposure to diverse perspectives and contribute to polarization in society.
+
+
+\item \textbf{Intellectual Property and Content Ownership} :
+The use of recommendation systems also intersects with legal issues regarding intellectual property and content ownership\cite{ethical}. When these systems aggregate and suggest content from various sources, they must navigate copyright laws to avoid infringing on the rights of content creators. Platforms that fail to adequately manage these rights may face legal challenges, necessitating a careful approach to how they curate and present content.
+
+\item \textbf{Conclusion} :
+In conclusion, while recommendation systems offer significant benefits in enhancing user experience and driving sales, they also pose considerable ethical and legal challenges. Organizations must prioritize transparency, fairness, and user consent in their data practices, actively work to mitigate bias, and ensure that their systems foster informed choices rather than manipulation. By addressing these issues proactively, companies can build trust with their users and contribute to a more ethical digital landscape.
+
+\end{itemize}
+
+
 
 \section{Risks of Data Breaches} \label{Risks of Data Breaches}
 
+One of the primary risks is the exposure of personal data. These systems collect sensitive information, including user preferences and behavior patterns\cite{info}. A data breach can lead to unauthorized access, putting users at risk of identity theft and fraud. This potential for personal data exposure is compounded by the fact that users may feel vulnerable and less inclined to share information, which can lead to a decline in user engagement and loyalty.
+
+The loss of trust is another critical consequence of data breaches. When users learn that their data has been compromised, their confidence in the platform diminishes\cite{data}. Rebuilding this trust can be a challenging and lengthy process, often requiring significant investments in public relations and enhanced security measures.
+
+Moreover, the algorithms and data processing techniques used in recommendation systems represent substantial intellectual property for companies. A breach may expose these proprietary elements to competitors, potentially undermining the original company's market position and innovation.
+
+\newpage
+Regulatory consequences are also a pressing concern. With regulations like GDPR and CCPA in effect, organizations face severe penalties for failing to protect user data. A data breach could lead to hefty fines and increased scrutiny from regulatory bodies, complicating future business operations.
+
+Operational disruption is another risk associated with data breaches\cite{info}. Such incidents can lead to downtime and affect the overall availability of services, resulting in immediate financial losses and long-term damage to brand reputation. Additionally, if attackers gain access to recommendation systems, they could manipulate the algorithms to serve misleading or harmful content, further endangering users and tarnishing the company’s image.
+
+Finally, a successful data breach can expose vulnerabilities within an organization’s security infrastructure\cite{data}. This may lead to repeated attacks, compounding the damage over time and creating a cycle of security failures.
+
+In conclusion, while recommendation systems offer valuable benefits, the risks associated with data breaches must be taken seriously. Organizations should prioritize robust security measures, conduct regular audits, and foster a culture of data protection. By safeguarding user data, companies can enhance trust, protect their intellectual property, and ensure compliance with regulatory standards, ultimately leading to a more secure and reliable user experience.
+
 \section{Information Bubbles} \label{Information Bubbles}
+\textbf{Not ready}
  
 
 \section{Current and Future Solutions} \label{Current and Future Solutions}
@@ -197,10 +246,10 @@ Finally, personalized recommendations can encourage users to spend more time on 
         Year  & Billions of USD \\\hline
         2022  & 2.18  \\
         2023  & 2.8   \\
-        2024  & 3.6   \\
-        2025  & 4.63  \\
-        2026  & 5.94  \\
-        2027  & 7.64  \\
+        2024  & 3.6    \\
+        2025  & 4.63   \\
+        2026  & 5.94   \\
+        2027  & 7.64   \\
         2028  & 9.81   \\
         2029  & 12.61  \\
         2030  & 16.21  \\
@@ -212,10 +261,10 @@ Finally, personalized recommendations can encourage users to spend more time on 
     \label{tab:widgets}
 \end{table}
 \section{Conclusion} \label{Conclusion}
+\textbf{Not ready}
 
 
-%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-\newpage
+
 \bibliography{literatura}
 \bibliographystyle{plain}
 \end{document}
